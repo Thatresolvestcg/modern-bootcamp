@@ -1,18 +1,16 @@
-let temp = 31;
-const isFreezing = temp <= 31;
+let temp = 131;
 
-console.log(isFreezing);
+if (temp <= 32) {
+    console.log('It is too cold outside.');
+} if (temp >= 110) {
+    console.log('It is too hot outside.')
+}
 
-// challenge area
-//  create an age var set to my age
-//  calc isChild - if they are seven OR under
-// //  calc isSenior - if they are sixty five or over
-// print is child value
-// print is senior value 
 
-const age = 31;
-const isChild = age <= 7;
-const isSenior = age >= 65;
-console.log("Does the customer qualify for Child concession: " + isChild);
-console.log("Does the customer qualify for Senior concession: " + isSenior);
+const age = 80;
 
+if (age <= 7) {
+    console.log('The customer qualifies for a child concession.')
+} if (age >= 65) {
+    console.log('The customer qualifies for a senior concession.')
+}
