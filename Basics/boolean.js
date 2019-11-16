@@ -7,7 +7,7 @@ if (temp <= 32) {
 }
 
 
-const age = 80;
+const age = 5;
 
 if (age <= 7) {
     console.log('The customer qualifies for a child concession.')
