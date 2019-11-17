@@ -4,22 +4,25 @@
 
 
 let examResult = function (studentScore, totalPossible) {
-    percentage = studentScore * 100 / totalPossible
+    let percentage = studentScore * 100 / totalPossible
     // return percentage;
     if (percentage >= 90 && percentage <= 100) {
-        console.log(`Congratulations you got an A with a total score of ${percentage}%`)
-    } if (percentage >= 80 && percentage <= 89) {
-        console.log(`Congratulations you got an B with a total score of ${percentage}%`)
-    } if (percentage >= 70 && percentage <= 79) {
-        console.log(`Congratulations you got an C with a total score of ${percentage}%`)
-    } if (percentage >= 60 && percentage <= 69) {
-        console.log(`Congratulations you got an D with a total score of ${percentage}%`)
-    } if (percentage >= 0 && percentage <= 59) {
-        console.log(`Congratulations you got an F with a total score of ${percentage}%`)
+        letterGrade = 'A'
+    } else if (percentage >= 80 && percentage <= 89) {
+        letterGrade = 'B'
+    } else if (percentage >= 70 && percentage <= 79) {
+        letterGrade = 'C'
+    } else if (percentage >= 60 && percentage <= 69) {
+        letterGrade = 'D'
+    } else if (percentage >= 0 && percentage <= 59) {
+        letterGrade = 'F'
+    } else {
+        console.log('I am not sure about that, could you resubmit your score?')
     }
+    console.log(`Congratulations you got an ${letterGrade} with a total score of ${percentage}%`)
 }
 
 examResult(9, 10);
 examResult(2, 10);
 examResult(6, 10);
-examResult(8, 10);
+examResult(80, 10);
