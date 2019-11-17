@@ -18,9 +18,10 @@ console.log(scoreText)
 // create a new function for tip calculator getTip
 // takes two arguments, total, tipPercent - default could be .2 (20%)
 
-let getTip = function (billTotal, tipPercent = .2) {
-    total = billTotal * tipPercent;
-    return `The total tip amount would be ${total}`;
+let getTip = function (total, tipPercent = .2) {
+    let percent = tipPercent * 100;
+    let tip = total * tipPercent;
+    return `A ${percent}% tip on a $${total} would be $${tip}`
 }
 
 console.log(getTip(100))
