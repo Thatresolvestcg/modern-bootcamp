@@ -8,21 +8,20 @@ let examResult = function (studentScore, totalPossible) {
     // return percentage;
     if (percentage >= 90 && percentage <= 100) {
         letterGrade = 'A'
-    } else if (percentage >= 80 && percentage <= 89) {
+    } else if (percentage >= 80 && percentage < 90) {
         letterGrade = 'B'
-    } else if (percentage >= 70 && percentage <= 79) {
+    } else if (percentage >= 70 && percentage < 80) {
         letterGrade = 'C'
-    } else if (percentage >= 60 && percentage <= 69) {
+    } else if (percentage >= 60 && percentage < 70) {
         letterGrade = 'D'
-    } else if (percentage >= 0 && percentage <= 59) {
+    } else if (percentage >= 0 && percentage < 60) {
         letterGrade = 'F'
-    } else {
-        console.log('I am not sure about that, could you resubmit your score?')
     }
-    console.log(`Congratulations you got an ${letterGrade} with a total score of ${percentage}%`)
+    return (`Congratulations you got an ${letterGrade} with a total score of ${percentage}%`)
 }
 
-examResult(9, 10);
-examResult(2, 10);
-examResult(6, 10);
-examResult(80, 10);
+
+console.log(examResult(90, 100));
+console.log(examResult(2, 10));
+console.log(examResult(6, 10));
+console.log(examResult(8, 10));
