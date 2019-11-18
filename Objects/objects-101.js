@@ -22,8 +22,8 @@ let myPerson = {
     location: 'Manchester'
 }
 
-console.log(`${myPerson.name} is ${myPerson.age} years old and lives in ${myPerson.location}`)
+console.log(`${myPerson.name} is ${myPerson.age} years old and lives in ${myPerson.location}.`)
 
 myPerson.age++
 
-console.log(`${myPerson.name} is ${myPerson.age} years old and lives in ${myPerson.location}`)
+console.log(`${myPerson.name} is ${myPerson.age} years old and lives in ${myPerson.location}.`)
