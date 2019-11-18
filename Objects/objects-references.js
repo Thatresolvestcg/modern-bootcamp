@@ -20,7 +20,7 @@ let addExpense = function (account, amount) {
 
 let getAccountSummary = function (account) {
     let total = (account.income - account.expenses)
-    return `The account for ${account.name} has a total of ${total} as it has ${account.income} for income and ${account.expenses} for expenses`
+    return `The account for ${account.name} has a total of £${total} as it has £${account.income} for income and £${account.expenses} for expenses`
 }
 
 let resetAccount = function (account) {
@@ -29,12 +29,9 @@ let resetAccount = function (account) {
 }
 
 addIncome(myAccount, 2000)
-console.log(myAccount)
 addExpense(myAccount, 100)
-console.log(myAccount)
-getAccountSummary(myAccount)
-console.log(myAccount)
+console.log(getAccountSummary(myAccount))
 resetAccount(myAccount)
-console.log(myAccount)
+console.log(getAccountSummary(myAccount))
 addIncome(myAccount, 900)
-console.log(myAccount)
+console.log(getAccountSummary(myAccount))
