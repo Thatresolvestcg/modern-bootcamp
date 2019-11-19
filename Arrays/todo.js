@@ -5,4 +5,4 @@
 
 const toDoList = ['Learn React', 'Start using Nightwatch', 'Implement TDD', 'Learn more about Javascript', 'Console log errors']
 
-console.log(`You have ${toDoList.length} todos, the first one is ${toDoList[0]} and the second to last one is ${toDoList[toDoList.length - 2]}`)
+console.log(`You have ${toDoList.length} todos, the first todo: is ${toDoList[0]} and the second to last todo: is ${toDoList[toDoList.length - 2]}`)
