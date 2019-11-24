@@ -5,4 +5,18 @@
 
 const toDoList = ['Learn React', 'Start using Nightwatch', 'Implement TDD', 'Learn more about Javascript', 'Console log errors']
 
-console.log(`You have ${toDoList.length} todos, the first todo: is ${toDoList[0]} and the second to last todo: is ${toDoList[toDoList.length - 2]}`)
+// console.log(`You have ${toDoList.length} todos, the first todo: is ${toDoList[0]} and the second to last todo: is ${toDoList[toDoList.length - 2]}`)
+
+
+// delete the third item
+// add a new item at the end - can be anything
+// remove the first item from the list 
+
+
+toDoList.splice(2, 1)
+console.log(toDoList)
+toDoList.push('new item for a lazy dude')
+console.log(toDoList)
+toDoList.shift()
+console.log(toDoList)
+
