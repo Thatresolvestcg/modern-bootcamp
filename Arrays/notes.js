@@ -12,9 +12,16 @@ const notes = ['Note 1', 'Note 2', 'Note 3']
 // console.log(notes.length) // 3 items returns 3
 // console.log(notes)
 
-notes[2] = 'this is the new note 3'
-console.log(notes)
+// notes[2] = 'this is the new note 3'
+// console.log(notes)
 
 // // bracket notation here
 // console.log(notes[0]) //accessing an item by its index
 // console.log(notes[notes.length - 1]) // returns the last item
+
+notes.forEach(function (item, index) {
+    console.log(item)
+    console.log(index)
+});
+
+console.log(notes)
