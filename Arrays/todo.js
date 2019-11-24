@@ -25,3 +25,10 @@ toDoList.forEach(function (item, index) {
     const num = index + 1;
     console.log(`${num}. ${item}`)
 })
+
+// print the items in order for the whole array
+
+for (let count = 0; count < toDoList.length; count++) {
+    console.log(toDoList[count]);
+}
+
