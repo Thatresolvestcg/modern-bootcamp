@@ -1,34 +1,23 @@
 const notes = ['Note 1', 'Note 2', 'Note 3']
+console.log(notes.indexOf('Note 2'))
 
-// console.log(notes.pop())
-// notes.push('My new note')
+const noteObjects = [{
+    title: 'My next trip',
+    body: 'I would like to go to barcelona'
+}, {
+    title: 'Things to work on',
+    body: 'spend more time on JS'
+}, {
+    title: 'Office mods',
+    body: 'get a third monitor'
+},
+{}]
 
-// console.log(notes.shift())
-// notes.unshift('my first note')
+console.log(noteObjects.indexOf({}))
 
-// // notes.splice(1, 1) first argument where, second argument how many
-// notes.splice(1, 0, 'this is the second item')
+const index = noteObjects.findIndex(function (note, index) {
+    console.log(note)
+    return note.title === 'Things to work on'
+})
 
-// console.log(notes.length) // 3 items returns 3
-// console.log(notes)
-
-// notes[2] = 'this is the new note 3'
-// console.log(notes)
-
-// // bracket notation here
-// console.log(notes[0]) //accessing an item by its index
-// console.log(notes[notes.length - 1]) // returns the last item
-
-notes.forEach(function (item, index) {
-    console.log(item)
-    console.log(index)
-});
-
-for (let count = 0; count < notes.length; count++) {
-    console.log(notes[count])
-}
-
-
-for (let count = notes.length - 1; count >= 0; count--) {
-    console.log(notes[count])
-}
+console.log(index)
