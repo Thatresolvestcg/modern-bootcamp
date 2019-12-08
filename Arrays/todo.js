@@ -26,6 +26,13 @@ const deleteToDo = function (todos, todoText) {
     }
 }
 
+const getThingsToDo = function (todos) {
+    return todos.filter(function (todo) {
+        return !todo.completed
 
-deleteToDo(todos, 'learn react')
-console.log(todos)
+    })
+}
+
+//challenge 
+
+console.log(getThingsToDo(todos))
