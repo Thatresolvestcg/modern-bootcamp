@@ -9,17 +9,14 @@ const notes = [{
     body: 'get a third monitor'
 }]
 
-const findNote = function (notes, noteTitle) {
-    const index = notes.findIndex(function (note) {
-        return note.title.toLowerCase() === noteTitle.toLowerCase()
-    })
-    return notes[index]
-}
-const note = findNote(notes, 'Things to work on')
 
-const filteredNotes = notes.filter(function (note, index) {
-    const isTitleMatch = note.title.toLowerCase().includes('hi')
-    const isBodyMatch = note.body.toLowerCase().includes('it')
-    return isTitleMatch || isBodyMatch
-})
-console.log(filteredNotes)
+const findNotes = function (notes, query) {
+    return notes.filter(function (note, index) {
+        const isTitleMatch = note.title.toLowerCase().includes(query.toLowerCase())
+        const isBodyMatch = note.body.toLowerCase().includes(query.toLowerCase())
+        return isTitleMatch || isBodyMatch
+    })
+}
+
+
+console.log(findNotes(notes, 'next'))
