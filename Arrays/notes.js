@@ -1,7 +1,4 @@
-const notes = ['Note 1', 'Note 2', 'Note 3']
-console.log(notes.indexOf('Note 2'))
-
-const noteObjects = [{
+const notes = [{
     title: 'My next trip',
     body: 'I would like to go to barcelona'
 }, {
@@ -13,11 +10,25 @@ const noteObjects = [{
 },
 {}]
 
-console.log(noteObjects.indexOf({}))
+// const findNote = function (notes, noteTitle) {
+//     const index = notes.findIndex(function (note) {
+//         return note.title.toLowerCase() === noteTitle.toLowerCase()
+//     })
+//     return notes[index]
+// }
 
-const index = noteObjects.findIndex(function (note, index) {
-    console.log(note)
-    return note.title === 'Things to work on'
-})
+const findNote = function (notes, noteTitle) {
+    const note = notes.find(function (note, index) {
+        return note.title.toLowerCase() === noteTitle.toLowerCase()
+    })
+    return note
+}
 
-console.log(index)
+
+
+const note = findNote(notes, 'Things to work on')
+console.log(note)
+
+
+
+
