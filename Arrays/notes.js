@@ -7,28 +7,19 @@ const notes = [{
 }, {
     title: 'Office mods',
     body: 'get a third monitor'
-},
-{}]
-
-// const findNote = function (notes, noteTitle) {
-//     const index = notes.findIndex(function (note) {
-//         return note.title.toLowerCase() === noteTitle.toLowerCase()
-//     })
-//     return notes[index]
-// }
+}]
 
 const findNote = function (notes, noteTitle) {
-    const note = notes.find(function (note, index) {
+    const index = notes.findIndex(function (note) {
         return note.title.toLowerCase() === noteTitle.toLowerCase()
     })
-    return note
+    return notes[index]
 }
-
-
-
 const note = findNote(notes, 'Things to work on')
-console.log(note)
 
-
-
-
+const filteredNotes = notes.filter(function (note, index) {
+    const isTitleMatch = note.title.toLowerCase().includes('hi')
+    const isBodyMatch = note.body.toLowerCase().includes('it')
+    return isTitleMatch || isBodyMatch
+})
+console.log(filteredNotes)
